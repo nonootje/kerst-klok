@@ -1,0 +1,62 @@
+<http>
+	<head>
+		<meta charset="utf-8">
+		<title>
+			KERST KLOK
+		</title>
+		<script>
+			function startTime() {
+			  var today = new Date(); 
+			  var h = today.getHours(); // vraagt uren op
+			  var m = today.getMinutes(); //vraagt minuten
+			  var s = today.getSeconds(); //vraagt seconden
+			  m = checkTime(m);
+			  s = checkTime(s);
+			  document.getElementById('tijd').innerHTML = //zet de tijd in het element "tijd"
+			  h + ":" + m; //zet een dubbele punt tussen de uren en minuten
+			  var t = setTimeout(startTime, 500);
+			}
+			function checkTime(i) {
+			  if (i < 10) {i = "0" + i};  // zorgt er voor dat er altijd 2 getallen staan bij de minuten
+			  return i;
+			}
+		</script>
+		<link rel="stylesheet" type="text/css" href="opmaak.css"></link>
+	</head>
+	<body onload="startTime()">
+		<p id="tijd"></p>
+		<div class="snowflakes" aria-hidden="true">
+			<div class="snowflake">
+			❅
+			</div>
+			<div class="snowflake">
+			❅
+			</div>
+			<div class="snowflake">
+			❆
+			</div>
+			<div class="snowflake">
+			❆
+			</div>
+			<div class="snowflake">
+			❅
+			</div>
+			<div class="snowflake">
+			❆
+			</div>
+			<div class="snowflake">
+			❆
+			</div>
+			<div class="snowflake">
+			❅
+			</div>
+			<div class="snowflake">
+			❆
+			</div>
+			<div class="snowflake">
+			❆
+			</div>
+		</div>
+		<iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWWvHBEQLnV1N" width="100%" height="100%" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+	</body>
+</http>
